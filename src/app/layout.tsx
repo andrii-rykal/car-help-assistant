@@ -1,0 +1,32 @@
+import type { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
+import './globals.css';
+import { Footer, Header } from '@/components';
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-roboto',
+  subsets: ['latin'],
+});
+
+export const metadata: Metadata = {
+  title: 'Car-assistant',
+  description: 'all information about the car in one application',
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${roboto.variable} antialiased`}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+
+      </body>
+    </html>
+  );
+}
