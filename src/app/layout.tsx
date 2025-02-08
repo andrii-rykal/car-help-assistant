@@ -1,7 +1,9 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
 import { Footer, Header } from '@/components';
+import { CssBaseline } from '@mui/material';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -20,13 +22,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-
-      </body>
-    </html>
+    <React.Fragment>
+      <CssBaseline />
+      <html lang="en">
+        <body className={`${roboto.variable} antialiased`}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </React.Fragment>
   );
 }
