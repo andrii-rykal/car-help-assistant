@@ -21,26 +21,30 @@ const navLinks = [
   { title: 'Домашня', path: '/' },
   { title: 'Про додаток', path: '/about' },
   { title: 'Новини', path: '/news' },
-
-
-
-
-  { title: "Контакти", path: '/contacts' },
+  { title: 'Контакти', path: '/contacts' },
   { title: 'Допомога', path: '/help' },
 ];
 
-const Header = (       
-  
+const Header = (
+
+
+
 ) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const toggleDrawer = () => {
-    setMobileOpen(!mobileOpen);
+  const toggleDrawer = (
+  
+  
+  
+  ) => {
+    setMobileOpen(
+      
+      !mobileOpen);
   };
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar
           sx={{
             display: 'flex',
