@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint --ignore-path .gitignore --dir src",
     "format": "prettier . --ignore-path .gitignore --write",
+    "fix-style": "npm run format & npm run lint",
     "prepare": "husky"
   },
   "dependencies": {
