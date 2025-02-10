@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <React.Fragment>
       <CssBaseline />
-      <html lang="en">
+      <html lang='en'>
         <body className={`${roboto.variable} antialiased`}>
           <Header />
           <main>{children}</main>

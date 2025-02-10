@@ -21,11 +21,17 @@ const navLinks = [
   { title: 'Домашня', path: '/' },
   { title: 'Про додаток', path: '/about' },
   { title: 'Новини', path: '/news' },
-  { title: 'Контакти', path: '/contacts' },
+
+
+
+
+  { title: "Контакти", path: '/contacts' },
   { title: 'Допомога', path: '/help' },
 ];
 
-const Header = () => {
+const Header = (       
+  
+) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -42,15 +48,15 @@ const Header = () => {
             justifyContent: 'space-between',
           }}
         >
-          <Typography variant="h6" component="span" sx={{}}>
-            <Link href="/">Car Assistant</Link>
+          <Typography variant='h6' component='span' sx={{}}>
+            <Link href='/'>Car Assistant</Link>
           </Typography>
 
           <nav>
             {navLinks.map((link) => (
               <Button
                 key={link.path}
-                color="inherit"
+                color='inherit'
                 LinkComponent={Link}
                 href={link.path}
                 sx={{ display: { xs: 'none', md: 'inline-flex' } }}
@@ -60,15 +66,15 @@ const Header = () => {
             ))}
           </nav>
           <Box sx={{ display: { xs: 'none', md: 'inline-flex' } }}>
-            <Button color="inherit">Увійти</Button>
-            <Button color="inherit">Реєстрація</Button>
+            <Button color='inherit'>Увійти</Button>
+            <Button color='inherit'>Реєстрація</Button>
           </Box>
 
           <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
+            size='large'
+            edge='start'
+            color='inherit'
+            aria-label='menu'
             sx={{ display: { xs: 'flex', md: 'none' } }}
             onClick={toggleDrawer}
           >
@@ -77,7 +83,7 @@ const Header = () => {
         </Toolbar>
       </AppBar>
       <Drawer
-        anchor="right"
+        anchor='right'
         open={mobileOpen}
         onClose={toggleDrawer}
         sx={{ display: { xs: 'block', md: 'none' } }}
