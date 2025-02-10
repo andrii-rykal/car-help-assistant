@@ -37,6 +37,9 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "npm run fix-style"
+    "*.{js,jsx,ts,tsx}": [
+      "npm run format",
+      "npm run lint"
+    ]
   }
 }

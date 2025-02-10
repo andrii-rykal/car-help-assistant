@@ -25,20 +25,11 @@ const navLinks = [
   { title: 'Допомога', path: '/help' },
 ];
 
-const Header = (
-
-
-
-) => {
+const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const toggleDrawer = (
-    
-  
-  ) => {
-    setMobileOpen(
-      
-      !mobileOpen);
+  const toggleDrawer = () => {
+    setMobileOpen(!mobileOpen);
   };
 
   return (
@@ -76,7 +67,7 @@ const Header = (
           <IconButton
             size='large'
             edge='start'
-            color='inherit'
+            color=='inherit'
             aria-label='menu'
             sx={{ display: { xs: 'flex', md: 'none' } }}
             onClick={toggleDrawer}
