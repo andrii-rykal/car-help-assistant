@@ -42,7 +42,7 @@ const Header = () => {
             justifyContent: 'space-between',
           }}
         >
-          <Typography variant="h6" component="span" sx={{ }}>
+          <Typography variant="h6" component="span" sx={{}}>
             <Link href="/">Car Assistant</Link>
           </Typography>
 
@@ -74,7 +74,6 @@ const Header = () => {
           >
             <Menu />
           </IconButton>
-
         </Toolbar>
       </AppBar>
       <Drawer
@@ -104,7 +103,16 @@ const Header = () => {
               </ListItem>
             ))}
           </List>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'column', width: 'fit-content', gap: 1, alignItems: 'flex-start', p: 1}} >
+          <Box
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              flexDirection: 'column',
+              width: 'fit-content',
+              gap: 1,
+              alignItems: 'flex-start',
+              p: 1,
+            }}
+          >
             <Button>Увійти</Button>
             <Button>Реєстрація</Button>
           </Box>

@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <AppBar position='fixed' color='primary' sx={{top: 'auto', bottom: 0}}>
+    <AppBar position='fixed' color="primary" sx={{ top: 'auto', bottom: 0 }}>
       <Toolbar>
         <Typography variant="h6" component="span" sx={{}}>
           <Link href="/">Car Assistant</Link>
