@@ -59,7 +59,11 @@ const Header = () => {
               </Button>
             ))}
           </nav>
-          <Box sx={{ display: { xs: 'none', md: 'inline-flex' } }}>
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'inline-flex' },
+            }}
+          >
             <Button color='inherit'>Увійти</Button>
             <Button color='inherit'>Реєстрація</Button>
           </Box>
@@ -67,7 +71,7 @@ const Header = () => {
           <IconButton
             size='large'
             edge='start'
-            color=='inherit'
+            color='inherit'
             aria-label='menu'
             sx={{ display: { xs: 'flex', md: 'none' } }}
             onClick={toggleDrawer}
