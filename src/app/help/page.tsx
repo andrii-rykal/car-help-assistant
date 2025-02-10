@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Cars = () => {
+const Help = () => {
   return (
     <div>
-      Cars Page
+      Help Page
     </div>
   )
 }
 
-export default Cars
+export default Help
