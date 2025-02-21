@@ -58,6 +58,8 @@ const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { login, registration } = useAuthStore();
 
+  console.log(isRegister);
+
   const {
     register,
     handleSubmit,
