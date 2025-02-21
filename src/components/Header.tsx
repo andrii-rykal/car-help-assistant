@@ -1,5 +1,6 @@
 'use client';
 
+import { useAuthStore } from '@/store/authStore';
 import { Close, Menu } from '@mui/icons-material';
 import {
   AppBar,
@@ -32,8 +33,10 @@ const Header = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const userName = useAuthStore((state) => state.userName);
+
   return (
-    <>
+    <Box sx={{ position: 'sticky', top: 0, zIndex: 100 }}>
       <AppBar position='static'>
         <Toolbar
           sx={{
@@ -59,13 +62,16 @@ const Header = () => {
               </Button>
             ))}
           </nav>
+          {userName}
           <Box
             sx={{
               display: { xs: 'none', md: 'inline-flex' },
             }}
           >
-            <Button color='inherit'>Увійти</Button>
-            <Button color='inherit'>Реєстрація</Button>
+            <Button LinkComponent={Link} href='/login' color='inherit'>
+              Увійти
+            </Button>
+            {/* <Button color='inherit'>Реєстрація</Button> */}
           </Box>
 
           <IconButton
@@ -117,12 +123,14 @@ const Header = () => {
               p: 1,
             }}
           >
-            <Button>Увійти</Button>
-            <Button>Реєстрація</Button>
+            <Button LinkComponent={Link} href='/login' onClick={toggleDrawer}>
+              Увійти
+            </Button>
+            {/* <Button>Реєстрація</Button> */}
           </Box>
         </Box>
       </Drawer>
-    </>
+    </Box>
   );
 };
 
