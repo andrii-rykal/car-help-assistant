@@ -1,4 +1,4 @@
-import { LoginResponse } from '@/types/loginResponse';
+import { LoginResponse } from '@/types/LoginResponse';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
